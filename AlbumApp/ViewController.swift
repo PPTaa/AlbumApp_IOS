@@ -34,8 +34,10 @@ class ViewController: UIViewController {
     // 중복 코드 메소드화
     func refreshNum(){
         let randInt = Int.random(in: 10000...100000)
+        let randPhoto = Int.random(in: 1...3)
         randPrice = randInt
         priceLabel.text = "금액 : \(randPrice)원"
+        myImge.image = UIImage(named: "park\(randPhoto)")
     }
     
     @IBOutlet weak var myImge: UIImageView!
